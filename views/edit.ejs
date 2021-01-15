@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<% const { _id, title, subtitle, text } = post %>
+
+<body>
+  <%- include('./partials/header.ejs') %>
+  <main role="main" class="page-main">
+    <h1 class="title">Edit a post</h1>
+    <form data-id="<%= _id %>" class="form">
+      <label for="title" class="form__label">Title:</label>
+      <input type="text" id="title" name="title" placeholder="<%= title %>" class="form__input" />
+      <label for="subtitle" class="form__label">Subtitle:</label>
+      <input type="text" id="subtitle" name="subtitle" placeholder="<%= subtitle %>" class="form__input" />
+      <label for="text" class="form__label">Text:</label>
+      <textarea type="text" id="text" name="text" placeholder="<%= text %>"
+        class="form__input form__input--text"></textarea>
+      <button type="submit" class="button">Edit</button>
+    </form>
+  </main>
+  <%- include('./partials/footer.ejs') %>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+    integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+    crossorigin="anonymous"></script>
+  <script type="module" src="../public/scripts/edit.js"></script>
+</body>
+
+</html>

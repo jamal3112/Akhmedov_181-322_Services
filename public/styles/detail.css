@@ -1,0 +1,11 @@
+.text {
+  margin-bottom: 40px;
+}
+
+.icons {
+  font-size: 24px;
+}
+
+.icons:first-of-type {
+  margin-right: 10px;
+}

@@ -1,0 +1,157 @@
+/* DEFAULT STYLE */
+:root {
+  --main-blue-color: #2a75b6;
+  --gray-color: #cdc8c5;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100vh;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 15px solid var(--main-blue-color);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-blue-color);
+}
+
+p:not(.logo__name) {
+  line-height: 26px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.button {
+  max-width: 100px;
+  padding: 7px;
+  border: 2px dashed var(--main-blue-color);
+
+  font-size: 16px;
+  color: var(--main-blue-color);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+/* ------------------------------------------------ */
+
+/* HEADER STYLE */
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 115px;
+  padding-bottom: 90px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+@media (min-width: 657px) {
+  .logo {
+    flex-direction: row;
+  }
+}
+
+.logo__image {
+  width: 48px;
+  height: 70px;
+  margin-right: 15px;
+}
+
+.logo__name {
+  font-size: 60px;
+  text-align: center;
+}
+
+.main-nav {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu__link {
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.menu__link:hover {
+  border-bottom: 1px solid var(--main-blue-color);
+  transition: all 0.2s;
+}
+/* ------------------------------------------------ */
+
+/* FOOTER STYLE */
+
+/* MAIN STYLE */
+.page-main {
+  position: relative;
+
+  max-width: 760px;
+  width: 100%;
+  padding-bottom: 100px;
+
+  word-break: break-word;
+}
+/* ------------------------------------------------ */
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+
+  padding-bottom: 10px;
+}
+
+.page-footer__heart {
+  color: var(--main-blue-color);
+}
+/* ------------------------------------------------ */

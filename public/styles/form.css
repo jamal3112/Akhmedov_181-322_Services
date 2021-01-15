@@ -1,0 +1,20 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  margin-bottom: 5px;
+}
+
+.form__input {
+  margin-bottom: 20px;
+  padding: 10px;
+
+  font-size: 18px;
+}
+
+.form__input--text {
+  font-family: 'Raleway', sans-serif;
+  resize: vertical;
+}

@@ -1,0 +1,11 @@
+.container-404 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  text-align: center;
+}
+
+.title-404 {
+  font-size: 70px;
+}

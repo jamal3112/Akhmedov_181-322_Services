@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<body>
+  <%- include('./partials/header.ejs') %>
+  <main role="main" class="page-main">
+    <h1 class="title">Create a post</h1>
+    <form action="/posts" method="POST" class="form">
+      <label for="title" class="form__label">Title:</label>
+      <input type="text" id="title" name="title" required class="form__input" />
+      <label for="subtitle" class="form__label">Subtitle:</label>
+      <input type="text" id="subtitle" name="subtitle" required class="form__input" />
+      <label for="text" class="form__label">Text:</label>
+      <textarea type="text" id="text" name="text" required class="form__input form__input--text"></textarea>
+      <button type="submit" class="button">Post</button>
+    </form>
+  </main>
+  <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

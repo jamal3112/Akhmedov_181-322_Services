@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<body>
+  <%- include('./partials/header.ejs') %>
+  <main role="main" class="page-main">
+    <h1 class="visually-hidden">Blogs</h1>
+    <% if (posts.length > 0) { %>
+    <ol class="posts">
+      <% posts.forEach(({_id, title, subtitle, createdAt}) => { %>
+      <li class="posts__item">
+        <time datetime="<%= createdAt %>"
+          class="posts__date"><%= createdAt.toString().split(' ').slice(1, 4).join(' ') %></time>
+        <h2 class="posts__title"><%= title %></h2>
+        <p class="posts__subtitle"><%= subtitle %></p>
+        <a href="/posts/<%= _id %>" class="button">Read</a>
+      </li>
+      <% }) %>
+    </ol>
+    <% } else { %>
+    <p>No posts. Come later</p>
+    <% } %>
+  </main>
+  <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

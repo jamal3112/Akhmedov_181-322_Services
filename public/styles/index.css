@@ -1,0 +1,27 @@
+.posts {
+  width: 100%;
+}
+
+.posts__item {
+  padding-top: 35px;
+  padding-bottom: 24px;
+  border-top: 2px solid var(--gray-color);
+}
+
+.posts__date {
+  display: inline-block;
+
+  margin-bottom: 28px;
+
+  font-weight: 300;
+}
+
+.posts__title {
+  margin-bottom: 18px;
+
+  font-size: 20px;
+}
+
+.posts__subtitle {
+  margin-bottom: 20px;
+}

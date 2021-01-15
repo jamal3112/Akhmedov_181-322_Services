@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<% const { _id, title, text } = post %>
+
+<body>
+  <%- include('./partials/header.ejs') %>
+  <main role="main" class="page-main">
+    <h1 class="title"><%= title %></h1>
+    <p class="text"><%= text %></p>
+    <a href="/edit/<%= _id %>" class="icons">&#128394;&#65039;</a>
+    <button data-id=<%= _id %> class="icons trash-icon">&#128465;</button>
+  </main>
+  <%- include('./partials/footer.ejs') %>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+    integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+    crossorigin="anonymous"></script>
+  <script type="module" src="../public/scripts/detail.js"></script>
+</body>
+
+</html>
